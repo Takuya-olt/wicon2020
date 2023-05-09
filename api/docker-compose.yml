@@ -1,0 +1,48 @@
+version: '3'
+services:
+  api:
+    container_name: api
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+      - ./php.ini:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+
+  mysql:
+    container_name: mysql
+    image: mysql:8.0.3
+    build:
+      context: ./docker/mysql
+      dockerfile: Dockerfile
+    # command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./my.cnf:/etc/mysql/conf.d/mycnf
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: test
+      TZ: "Asia/Tokyo"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_ARBITRARY: 1
+      PMA_HOST: mysql
+      PMA_USER: test
+      PMA_PASSWORD: test
+    links:
+      - mysql
+    ports:
+      - 4040:80
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
+    container_name: phpmyadmin

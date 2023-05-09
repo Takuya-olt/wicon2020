@@ -1,0 +1,22 @@
+[
+    {
+        "boxNo": 1,
+        "weight": null
+    },
+    {
+        "boxNo": 2,
+        "weight":200
+    },
+    {
+        "boxNo": 3,
+        "weight": 100
+    },
+    {
+        "boxNo": 4,
+        "weight":200
+    },
+    {
+        "boxNo": 5,
+        "weight": 100
+    }
+]

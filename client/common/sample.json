@@ -1,0 +1,26 @@
+[
+  {
+    "name":"test1",
+    "weight":100
+  },
+  {
+    "name":"テスト2",
+    "weight":200
+  },
+  {
+    "name":"test1",
+    "weight":300
+  },
+  {
+    "name":"テスト2",
+    "weight":400
+  },
+  {
+    "name":"test1",
+    "weight":500
+  },
+  {
+    "name":"テスト2",
+    "weight":600
+  }
+]

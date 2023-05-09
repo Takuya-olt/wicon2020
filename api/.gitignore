@@ -1,0 +1,18 @@
+# .htaccessを無視する
+.ht*
+
+# testディレクトリを無視する
+test/
+
+# config.phpを無視する
+config.php
+
+# csvファイルを無視
+*.csv
+
+# jsonを無視
+*.json
+
+# docker関連を無視
+db
+phpmyadmin

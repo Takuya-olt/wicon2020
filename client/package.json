@@ -1,0 +1,38 @@
+{
+  "name": "lakebika",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate:dev": "cross-env MODE=development nuxt generate",
+    "generate:prod": "cross-env MODE=production nuxt generate",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "yarn lint:js",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@nuxtjs/proxy": "^2.1.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.3",
+    "node-sass": "4.14.1",
+    "nuxt": "^2.14.6",
+    "nuxt-leaflet": "^0.0.27",
+    "prettier": "^2.1.2",
+    "sass-loader": "7.3.1",
+    "vue-loader": "^15.9.5",
+    "vue-loading-template": "^1.3.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0"
+  }
+}
